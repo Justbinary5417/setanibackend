@@ -1,0 +1,9 @@
+package com.justbinary.service;
+
+import com.justbinary.dto.LoginRequest;
+import com.justbinary.dto.RegisterRequest;
+
+public interface AuthService {
+    String register(RegisterRequest request);
+    String login(LoginRequest request);
+}
