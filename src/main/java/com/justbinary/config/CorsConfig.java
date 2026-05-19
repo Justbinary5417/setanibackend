@@ -1,4 +1,4 @@
-git addpackage com.justbinary.config;
+package com.justbinary.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
