@@ -1,4 +1,4 @@
-package com.justbinary.config;
+﻿package com.justbinary.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,7 @@ public class CorsConfig {
 
         CorsConfiguration config = new CorsConfiguration();
 
-        // ── ALLOWED ORIGINS ──────────────────────────────────────
+        // â”€â”€ ALLOWED ORIGINS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         // Add your frontend URLs here (local dev + production)
         config.setAllowedOrigins(List.of(
             "http://localhost:3000",       // React dev
@@ -27,7 +27,7 @@ public class CorsConfig {
             "https://www.justbinary.com"   // Production www
         ));
 
-        // ── ALLOWED HTTP METHODS ─────────────────────────────────
+        // â”€â”€ ALLOWED HTTP METHODS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         config.setAllowedMethods(List.of(
             "GET",
             "POST",
@@ -37,7 +37,7 @@ public class CorsConfig {
             "OPTIONS"
         ));
 
-        // ── ALLOWED HEADERS ──────────────────────────────────────
+        // â”€â”€ ALLOWED HEADERS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         config.setAllowedHeaders(List.of(
             "Authorization",        // JWT Bearer token
             "Content-Type",         // application/json
@@ -48,22 +48,22 @@ public class CorsConfig {
             "Access-Control-Request-Headers"
         ));
 
-        // ── EXPOSED HEADERS ──────────────────────────────────────
+        // â”€â”€ EXPOSED HEADERS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         // Headers the browser JS can read from the response
         config.setExposedHeaders(List.of(
             "Authorization",
             "Content-Disposition"
         ));
 
-        // ── CREDENTIALS ──────────────────────────────────────────
+        // â”€â”€ CREDENTIALS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         // Must be true to send/receive JWT cookies or Auth headers
         config.setAllowCredentials(true);
 
-        // ── PREFLIGHT CACHE ──────────────────────────────────────
+        // â”€â”€ PREFLIGHT CACHE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         // Browser caches preflight OPTIONS result for 1 hour
         config.setMaxAge(3600L);
 
-        // ── APPLY TO ALL ROUTES ──────────────────────────────────
+        // â”€â”€ APPLY TO ALL ROUTES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);

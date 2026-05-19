@@ -1,4 +1,4 @@
-package com.justbinary.exception;
+﻿package com.justbinary.exception;
 
 public class InsufficientBalanceException extends RuntimeException {
 
@@ -25,11 +25,20 @@ public class InsufficientBalanceException extends RuntimeException {
 
     public double getShortfall() {
         return requestedStake - availableBalance;
-    }
+    }    public boolean canPartiallyFund() { return currentBalance > 0 && currentBalance < requestedStake; }
+    public boolean canPartiallyFund() { return currentBalance > 0 && currentBalance < requestedStake; }
 
-    public String getToastMessage() {
+    public boolean canPartiallyFund() { return currentBalance > 0 && currentBalance < requestedStake; }
+    public boolean canPartiallyFund() { return currentBalance > 0 && currentBalance < requestedStake; }
+
+    public boolean canPartiallyFund() { return currentBalance > 0 && currentBalance < requestedStake; }
+     public boolean canPartiallyFund() { return currentBalance > 0 && currentBalance < requestedStake; }
+     public boolean canPartiallyFund() { return currentBalance > 0 && currentBalance < requestedStake; }
+     public boolean canPartiallyFund() { return currentBalance > 0 && currentBalance < requestedStake; }
+     public boolean canPartiallyFund() { return currentBalance > 0 && currentBalance < requestedStake; }
+public String getToastMessage() {
         return String.format(
-            "❌ Insufficient balance. You need $%.2f more.",
+            "âŒ Insufficient balance. You need $%.2f more.",
             getShortfall()
         );
     }
